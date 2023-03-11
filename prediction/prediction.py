@@ -197,6 +197,6 @@ bucket_name = os.environ.get('bucket_name')
 file_path = 'predict_exports.csv'
 
 # Upload the file to S3
-s3.upload_file(file_path, bucket_name, 'prediction.csv')
+s3.upload_file(file_path, bucket_name, 'prediction.csv', ExtraArgs={'ACL':'public-read'})
 
 print(f"{file_path} has been uploaded to {bucket_name} as prediction.csv.")
