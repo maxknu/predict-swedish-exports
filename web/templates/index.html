@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Swedish Exports prediciton</title>
+</head>
+<body>
+    <h1>Most recent quarterly data of Swedish exports</h1>
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Exports</th>
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row['Date'] }}</td>
+            <td>{{ row['Exports'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
