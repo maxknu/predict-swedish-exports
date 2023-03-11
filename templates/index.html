@@ -13,7 +13,7 @@
         {% for row in data %}
         <tr>
             <td>{{ row['Date'] }}</td>
-            <td>{{ row['Exports'] }}</td>
+            <td>{{ '%0.2f'| format(row['Exports'] |float) }}</td>
         </tr>
         {% endfor %}
     </table>
