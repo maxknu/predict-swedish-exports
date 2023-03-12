@@ -1,12 +1,17 @@
 import boto3
 import csv
 import urllib.request
-from flask import Flask, render_template
+import os
 
-app = Flask(__name__)
+from flask import Flask, render_template
+from dotenv import load_dotenv
+
+load_dotenv()
+
+app = Flask(__name__) 
 
 s3 = boto3.client('s3')
-bucket_name = 'storage-workato'
+bucket_name = os.environ.get('bucket_name')
 file_name = 'https://storage-workato.s3.eu-central-1.amazonaws.com/prediction.csv'
 
 @app.route('/')

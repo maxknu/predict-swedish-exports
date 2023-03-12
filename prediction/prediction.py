@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 from dbnomics import fetch_series, fetch_series_by_api_link
-
+ 
 from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.metrics import mean_absolute_error
